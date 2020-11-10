@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DATA PENDUDUK</title>
+</head>
+<body>
+    <h1>DATA PENDUDUK</h1>
+    <form action="/tambah" method="POST">
+    <input type="text" name="inputnama" placeholder="NAMA LENGKAP">
+    <input type="text" name="inputalamat" placeholder="ALAMAT ASAL">
+    <input type="text" name="inputtempattanggallahir" placeholder="TEMPAT / TANGGAL LAHIR">
+    <input type="text" name="inputgolongandarah" placeholder="GOLONGAN DARAH">
+    <input type="text" name="inputtelepon" placeholder="NOMOR TELEPON">
+    <button>TAMBAH</button>
+    </form>
+    <table>
+        <thead>
+            <tr>
+                <th>NAMA</th>
+                <th>ALAMAT ASAL</th>
+                <th>TEMPAT / TANGGAL LAHIR</th>
+                <th>GOLONGAN DARAH</th>
+                <th>TELEPON</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{'#each data'}}
+            <tr>
+                <td>{{ NIK }}</td>
+                <td>{{ NAMA }}</td>
+                <td>{{ ALAMAT }}</td>
+                <td>{{ TEMPAT_TANGGAL_LAHIR }}</td>
+                <td>{{ GOLONGAN_DARAH }}</td>
+                <td>{{ TELEPON }}</td>
+            </tr>
+            {{'/each'}}
+        </tbody>
+    </table>
+ </body>
+</html>
